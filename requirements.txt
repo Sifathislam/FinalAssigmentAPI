@@ -6,6 +6,7 @@ distlib
 dj-database-url
 Django
 django-bootstrap4
+django-cors-headers
 django-crispy-forms
 django-email
 django-environ
@@ -38,4 +39,4 @@ soupsieve
 sqlparse
 typing_extensions
 tzdata
-virtualenv
+virtualen
