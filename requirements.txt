@@ -39,4 +39,4 @@ soupsieve
 sqlparse
 typing_extensions
 tzdata
-virtualen
+virtualenv==20.24.7
