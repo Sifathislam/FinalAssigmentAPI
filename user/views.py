@@ -14,7 +14,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import get_user_model
-from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 
@@ -85,13 +84,11 @@ class UserLogoutView(APIView):
         logout(request)
         return redirect('login')
 class UpdateUser(generics.RetrieveUpdateAPIView):
-    permission_classes = [IsAuthenticated]
     serializer_class = serializers.UpdateUserProfileSerializer
     def get_object(self):
         return self.request.user
     
 class UpdateUserProfileImage(generics.RetrieveUpdateAPIView):
-    permission_classes = [IsAuthenticated]
     serializer_class = serializers.UpdateProfileImage
 
     def get_object(self):
