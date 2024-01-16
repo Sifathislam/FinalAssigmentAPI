@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Avg
 from rest_framework import viewsets,filters, pagination
 from . import models
 from . import serializers
@@ -16,7 +17,7 @@ class AvailableProjectsForCategory(filters.BaseFilterBackend):
         return query_set
 
 class ProjectDetailsViewSet (viewsets.ModelViewSet):
-    queryset = models.ProjectDetailsModel.objects.all()
+    queryset = models.ProjectDetailsModel.objects.annotate(avg_rating=Avg('ratings__rating')).order_by('-avg_rating')
     serializer_class = serializers.ProjectDetailsSerializer
     pagination_class = ProjectPagination
     filter_backends = [AvailableProjectsForCategory]
