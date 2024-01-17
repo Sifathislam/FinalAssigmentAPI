@@ -92,7 +92,4 @@ class UpdateUserProfileImage(generics.RetrieveUpdateAPIView):
     serializer_class = serializers.UpdateProfileImage
 
     def get_object(self):
-        return models.ProfileImage.objects.get(user=self.request.user)
-
-    def perform_update(self, serializer):
-        serializer.save()
+        return models.ProfileImage.objects.all()
