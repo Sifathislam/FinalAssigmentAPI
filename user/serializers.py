@@ -33,6 +33,11 @@ class userLoginSerializer(serializers.Serializer):
     username = serializers.CharField(required = True)
     password = serializers.CharField(required = True)
 
+class alluserSerializer(serializers.Serializer):
+    class Meta:
+        model = User
+        fields = '__all__'
+
 class UpdateUserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = User

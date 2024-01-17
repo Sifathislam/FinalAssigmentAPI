@@ -91,3 +91,7 @@ class UpdateUser(generics.RetrieveUpdateAPIView):
 class UpdateUserProfileImage(viewsets.ModelViewSet):
     queryset = models.ProfileImage.objects.all()
     serializer_class = serializers.UpdateProfileImage
+
+class AllUserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = serializers.alluserSerializer
