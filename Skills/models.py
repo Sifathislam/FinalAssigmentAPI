@@ -2,11 +2,13 @@ from django.db import models
 
 # Create your models here.
 PROFECINCYLEVEL = [
-    ('➊',1),
-    ('➊ ➋',2),
-    ('➊ ➋ ➌',3),
-    ('➊ ➋ ➌ ➍',4),
-    ('➊ ➋ ➌ ➍ ➎',5),
+    ('★',1),
+    ('★★',2),
+    ('★★★',3),
+    ('★★★★',4),
+    ('★★★★★',5),
+    ('★★★★★★',6),
+    ('★★★★★★★',7),
 ]
 class SkillsModel(models.Model):
     name = models.CharField(max_length=50)
