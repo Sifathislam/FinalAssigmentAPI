@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-o8@=sv4!0@qmq=i674rlufhj0+$n7y=dm275jd8&r9n64i&x2+
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://sifatislamprotfolioapi.onrender.com','https://*.127.0.0.1']
+# CSRF_TRUSTED_ORIGINS = ['https://sifatislamprotfolioapi.onrender.com','https://*.127.0.0.1']
 
 # Application definition
 
