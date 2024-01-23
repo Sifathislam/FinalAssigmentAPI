@@ -64,7 +64,6 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://sifathislam.github.io",
     "http://127.0.0.1:5500",  # Allow requests from your frontend
-    "http://127.0.0.1:5500",  # Allow requests from your frontend
 ]
 
 ROOT_URLCONF = 'SifatIslam.urls'
