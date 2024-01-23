@@ -66,6 +66,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",  # Allow requests from your frontend
 ]
 
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
 ROOT_URLCONF = 'SifatIslam.urls'
 
 TEMPLATES = [
